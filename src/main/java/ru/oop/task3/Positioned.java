@@ -8,7 +8,6 @@ package ru.oop.task3;
  * @since 21.10.2020
  */
 interface Positioned {
-
     /**
      * Текущее местоположение
      */
