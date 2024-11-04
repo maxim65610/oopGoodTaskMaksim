@@ -1,11 +1,11 @@
 package ru.oop.task2;
 /**
- * Трансопорт
+ * Трансопорт, на котором поедет человек
  */
-interface Transport extends Positioned {
+interface Transport extends Positioned  {
     /**
-     * Движение транспорта до пункта назначения
+     * Едет до пунтка назначения по возможности
      * @param destination пункт назначения
      */
-    void move(Position destination);;
+     void move(Person person, Position destination);
 }

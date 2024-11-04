@@ -1,13 +1,14 @@
 package ru.oop.task1;
 
 /**
- * Машина
+ * Машина, на которой поедет человек
  */
-interface Car {
+public class Car {
     /**
      * Едет до пунтка назначения по возможности
      *
+     * @param person человек, который поедет на машине
      * @param destination место назначения
      */
-    Void move(Position destination);
+    public void move(Person person, Position destination) {}
 }

@@ -22,16 +22,17 @@ public class MainTask3 {
     /**
      * Переехать из текущего места в заданную точку
      */
-    public void moveTo(Person person, Position destination, List<Transport> transports) {
+    public void moveTo(Person person, Position destination) {
+        List<Transport> transports = List.of(new Car(), new Bike(), new Bus("77"));
         for (int i = 0; i <= transports.size(); i++) {
             Transport transport = transports.get(i);
             if (person.getPosition() != transport.getPosition()) {
                 person.walk(transport.getPosition());
             }
-            Position nextPosition = (i < transports.size()) ? transports.get(i + 1).getPosition() : destination;
-            transport.move(nextPosition);
+            Position nextPosition = (i < transports.size()) ?
+                    transports.get(i + 1).getPosition() : destination;
+            transport.move(person, nextPosition);
         }
-
         if (person.getPosition() != destination) {
             person.walk(destination);
         }

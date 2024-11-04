@@ -1,8 +1,5 @@
 package ru.oop.task2;
 
-
-import ru.oop.task1.Position;
-
 /**
  * <b>Задача 2:</b><br>
  * Добраться человеку до заданного места.<br>
@@ -27,13 +24,14 @@ public class MainTask2 {
     /**
      * Переехать из текущего места в заданную точку
      */
-    public void moveTo(Person person, Position destination, Transport transport) {
+    public void moveTo(Person person, Position destination) {
+        Transport transport = new Car();
         if (person.getPosition() != transport.getPosition()) {
             person.walk(transport.getPosition());
         }
-        transport.move((ru.oop.task2.Position) destination);
+        transport.move(person, destination);
         if (person.getPosition() != destination) {
-            person.walk((ru.oop.task2.Position) destination);
+            person.walk(destination);
         }
         assert person.getPosition() == destination;
     }

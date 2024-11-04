@@ -7,7 +7,6 @@ package ru.oop.task3;
  * @since 21.10.2020
  */
 interface Person extends Positioned {
-
     /**
      * Пройти до указанного места из текущего местоположения
      *
